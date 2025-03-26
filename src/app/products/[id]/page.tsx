@@ -1,16 +1,12 @@
 export default async function Page({
   params,
 }: {
-  params: Promise<{ slug: string }>;
+  params: Promise<{ id: string }>;
 }) {
-  const { slug } = await params;
-  const { default: Post } = await import(`@/content/${slug}.mdx`);
+  const { id } = await params;
+  const { default: Post } = await import(`@/content/${id}.mdx`);
 
   return <Post />;
-}
-
-export function generateStaticParams() {
-  return [{ slug: "welcome" }, { slug: "about" }];
 }
 
 export const dynamicParams = false;
