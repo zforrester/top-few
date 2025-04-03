@@ -1,7 +1,12 @@
-export const pages = [
-  { id: "ThruNite_TN12_V6", title: "ThruNite TN12 V6" },
+export const products = [
   {
-    id: "GearLight LED Tactical Flashlight",
+    id: "ThruNite_TN12_V6",
+    title: "ThruNite TN12 V6",
+    heroImage:
+      "https://cdn11.bigcommerce.com/s-9sfgjx/images/stencil/1280x1280/products/593/6146/1-1__34118.1727338243.jpg?c=2",
+  },
+  {
+    id: "GearLight_LED_Tactical_Flashlight",
     title: "GearLight LED Tactical Flashlight",
   },
   {
@@ -18,15 +23,15 @@ export const pages = [
   },
 ];
 
-export default async function ProductPage() {
+export default async function Productproduct() {
   return (
     <div>
       <p>All Products Page</p>
 
       <ul>
-        {pages.map((page) => (
-          <li key={page.id}>
-            <a href={`/products/${page.id}`}>{page.title}</a>
+        {products.map((product) => (
+          <li key={product.id}>
+            <a href={`/products/${product.id}`}>{product.title}</a>
           </li>
         ))}
       </ul>
